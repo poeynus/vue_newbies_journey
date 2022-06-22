@@ -1,14 +1,19 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from "./components/HelloWorld.vue";
-import UserInputVue from "./components/UserInput.vue";
-import UserCounterVue from "./components/UserCounter.vue";
-import IfRenderVue from "./components/IfRender.vue";
+import HelloWorld from "./components/basic/HelloWorld.vue";
+import UserInputVue from "./components/basic/UserInput.vue";
+import UserCounterVue from "./components/basic/UserCounter.vue";
+import IfRenderVue from "./components/basic/IfRender.vue";
+import ForRenderVue from "./components/basic/ForRender.vue";
+import ComputedVue from "./components/basic/Computed.vue";
+import WatchEffectVue from "./components/basic/WatchEffect.vue";
+import EmitVue from "./components/basic/Emit.vue";
+import SlotVue from "./components/basic/Slot.vue";
 </script>
 
 <template>
-  <IfRenderVue />
+  <EmitVue />
 </template>
 
 <style>
