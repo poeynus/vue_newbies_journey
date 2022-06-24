@@ -66,5 +66,15 @@
 ## 22.06.23
 
     오늘은 간단하게 예제들을 만들면서 실습해보았다. 아니 근데 vue 배우기 쉽다면서 개념이 어려운데?
-    - 실습 끝 내일은 ToDoList 만들 예정
+    - 실습 끝 내일은 TodoList 만들 예정
     - vue 쉽다면서!!! 왜 어렵나고 ㅠㅠㅠㅠㅠㅠㅠㅠㅠ
+
+## 22.06.24
+
+    TodoList 개발
+    - 변수를 공유하는 방법
+    1. Props/Emits
+    2. config.globalProperties
+    3. Vuex
+    4. Provide
+    - 흠 코드 이해하기를 목표로 => 내일은 script를 script setup으로 변경해볼 것이다.
