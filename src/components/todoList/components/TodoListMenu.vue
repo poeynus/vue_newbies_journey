@@ -26,6 +26,29 @@
 </template>
 
 <script>
+export default {
+  name: "TodoListMenu",
+};
+</script>
+
+<script setup>
+import { ref, watch, computed, inject } from "vue";
+const emit = defineEmits(["change-filter"]);
+const filters = inject("filters");
+const filter = ref(0);
+const state = computed(() => {
+  return filters[filter.value].str;
+});
+watch(
+  () => filter.value,
+  (filter) => {
+    context.emit("change-filter", filter);
+  }
+);
+</script>
+
+<!-- 
+<script>
 import { ref, watch, computed, inject } from "vue";
 export default {
   name: "TodoListMenu",
@@ -49,4 +72,4 @@ export default {
     };
   },
 };
-</script>
+</script> -->

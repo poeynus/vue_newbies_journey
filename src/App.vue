@@ -9,16 +9,20 @@
 </template>
 
 <script>
-import { inject } from "@vue/runtime-core";
-import TodoListContainer from "./components/todoList/components/TodoListContainer.vue";
 export default {
-  components: { TodoListContainer },
   name: "App",
-  setup() {
-    const today = inject("today");
-    return { today };
-  },
 };
+</script>
+
+<!--
+  script를 script setup으로 변경한 코드
+  따로 return을 안해도 Vue가 자동으로 설정해줌
+-->
+<script setup>
+import { inject } from "vue";
+import TodoListContainerVue from "./components/todoList/components/TodoListContainer.vue";
+
+const today = inject("today");
 </script>
 
 <style scoped>
@@ -30,3 +34,19 @@ hgroup h1 {
   font-weight: bolder;
 }
 </style>
+
+<!--  
+변경전 script 코드
+<script>
+import { inject } from "@vue/runtime-core";
+import TodoListContainer from "./components/todoList/components/TodoListContainer.vue";
+export default {
+  components: { TodoListContainer },
+  name: "App",
+  setup() {
+    const today = inject("today");
+    return { today };
+  },
+};
+</script>
+-->

@@ -31,6 +31,37 @@
 </template>
 
 <script>
+export default {
+  name: "TodoListNew",
+};
+</script>
+
+<!--
+  script setup에서는 스프레드 연산자를 통한 변수 노출이 불가능하여 직접적으로 명시해야 한다.
+-->
+<script setup>
+import { reactive, toRefs, inject, ref } from "vue";
+
+const today = inject("today");
+const addTodo = inject("addTodo");
+const val_obj = reactive({
+  job: "",
+  date: today,
+  today: today,
+});
+const onAddTodo = () => {
+  if (val_obj.job.length > 0) {
+    addTodo(val_obj.job, val_obj.date);
+    val_obj.job = "";
+    val_obj.date = today;
+  }
+};
+
+const { job, date } = toRefs(val_obj); // 스프레드 연산자 대신 비구조화 할당으로 쓴다네요
+</script>
+
+<!-- 
+<script>
 import { reactive, toRefs, inject, ref } from "vue";
 export default {
   name: "TodoListNew",
@@ -55,4 +86,4 @@ export default {
     };
   },
 };
-</script>
+</script> -->

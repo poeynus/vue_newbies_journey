@@ -78,3 +78,12 @@
     3. Vuex
     4. Provide
     - 흠 코드 이해하기를 목표로 => 내일은 script를 script setup으로 변경해볼 것이다.
+
+## 22.06.25
+
+    어제 만든 TodoList를 script setup형태로 변경해보았다.
+    1. 스프레드 연산자를 사용할 수 없으니 비구조화 할당으로 변경해서 사용하여야 한다.
+    2. 별도의 return이 필요 없다.
+    3. props를 사용한다면 defineProps를 사용하면 된다.
+    4. emit을 사용한다면 defineEmits를 사용하면 된다.
+    5. 나머지는 그냥 똑같은 거 같다.
